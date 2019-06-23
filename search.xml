@@ -4,9 +4,9 @@
   
     
     <entry>
-      <title>aritle</title>
-      <link href="/2019/06/23/aritle/"/>
-      <url>/2019/06/23/aritle/</url>
+      <title>docker容器使用</title>
+      <link href="/2019/06/23/docker%E5%AE%B9%E5%99%A8%E4%BD%BF%E7%94%A8/"/>
+      <url>/2019/06/23/docker%E5%AE%B9%E5%99%A8%E4%BD%BF%E7%94%A8/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -17,11 +17,49 @@
     
     
     <entry>
-      <title>用hexo搭建自己的博客</title>
-      <link href="/2019/06/22/%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
-      <url>/2019/06/22/%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
+      <title>git常用命令</title>
+      <link href="/2019/06/23/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+      <url>/2019/06/23/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
       
-        <content type="html"><![CDATA[<p>你好</p>]]></content>
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vps服务器自建梯子</title>
+      <link href="/2019/06/23/vps%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%87%AA%E5%BB%BA%E6%A2%AF%E5%AD%90/"/>
+      <url>/2019/06/23/vps%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%87%AA%E5%BB%BA%E6%A2%AF%E5%AD%90/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vps </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo搭建自己的博客</title>
+      <link href="/2019/06/22/hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+      <url>/2019/06/22/hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
+      
+        <content type="html"><![CDATA[<p>什么都还没写，哈哈哈哈</p>]]></content>
       
       
       
