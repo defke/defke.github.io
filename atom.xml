@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.defke.top/"/>
-  <updated>2019-06-23T07:46:31.721Z</updated>
+  <updated>2019-06-23T08:02:00.804Z</updated>
   <id>https://www.defke.top/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>aritle</title>
+    <link href="https://www.defke.top/2019/06/23/aritle-2/"/>
+    <id>https://www.defke.top/2019/06/23/aritle-2/</id>
+    <published>2019-06-23T08:02:00.000Z</published>
+    <updated>2019-06-23T08:02:00.804Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>aritle</title>
