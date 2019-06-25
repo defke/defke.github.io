@@ -84,7 +84,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="运维,gin,">
 
 
 
@@ -97,17 +97,24 @@
 
 
 
-<meta name="description" content="但行好事，莫问前程">
+<meta name="description" content="新建一个项目  ​    用go-module进行包管理（需要go版本&amp;gt;=1.11.0） 打开命令行，运行如下命令 12set GO111MODULE=on			//打开包管理set GOPROXY= https://goproxy.io		//设置下载包代理  运行命令,初始化项目 1go mod init  在main.go 文件导入如下包 1234import (   &amp;quot;gi">
+<meta name="keywords" content="运维,gin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="docker容器使用">
-<meta property="og:url" content="https://www.defke.top/2019/06/23/docker容器使用/index.html">
+<meta property="og:title" content="gin结合endless实现服务平滑重启">
+<meta property="og:url" content="https://www.defke.top/2019/06/24/gin结合endless实现服务平滑重启/index.html">
 <meta property="og:site_name" content="defke&#39;s notes">
-<meta property="og:description" content="但行好事，莫问前程">
+<meta property="og:description" content="新建一个项目  ​    用go-module进行包管理（需要go版本&amp;gt;=1.11.0） 打开命令行，运行如下命令 12set GO111MODULE=on			//打开包管理set GOPROXY= https://goproxy.io		//设置下载包代理  运行命令,初始化项目 1go mod init  在main.go 文件导入如下包 1234import (   &amp;quot;gi">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-23T14:12:24.937Z">
+<meta property="og:image" content="https://www.defke.top/2019/06/24/gin结合endless实现服务平滑重启/1561459924.jpg">
+<meta property="og:image" content="https://www.defke.top/2019/06/24/gin结合endless实现服务平滑重启/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190625191018.png">
+<meta property="og:image" content="https://www.defke.top/2019/06/24/gin结合endless实现服务平滑重启/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190625205539.png">
+<meta property="og:image" content="https://www.defke.top/2019/06/24/gin结合endless实现服务平滑重启/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190625210230.png">
+<meta property="og:image" content="https://www.defke.top/2019/06/24/gin结合endless实现服务平滑重启/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190625210445.png">
+<meta property="og:updated_time" content="2019-06-25T13:47:12.811Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="docker容器使用">
-<meta name="twitter:description" content="但行好事，莫问前程">
+<meta name="twitter:title" content="gin结合endless实现服务平滑重启">
+<meta name="twitter:description" content="新建一个项目  ​    用go-module进行包管理（需要go版本&amp;gt;=1.11.0） 打开命令行，运行如下命令 12set GO111MODULE=on			//打开包管理set GOPROXY= https://goproxy.io		//设置下载包代理  运行命令,初始化项目 1go mod init  在main.go 文件导入如下包 1234import (   &amp;quot;gi">
+<meta name="twitter:image" content="https://www.defke.top/2019/06/24/gin结合endless实现服务平滑重启/1561459924.jpg">
 
 
 
@@ -137,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="https://www.defke.top/2019/06/23/docker容器使用/">
+  <link rel="canonical" href="https://www.defke.top/2019/06/24/gin结合endless实现服务平滑重启/">
 
 
 
 
 
-  <title>docker容器使用 | defke's notes</title>
+  <title>gin结合endless实现服务平滑重启 | defke's notes</title>
   
 
 
@@ -312,7 +319,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.defke.top/2019/06/23/docker容器使用/">
+    <link itemprop="mainEntityOfPage" href="https://www.defke.top/2019/06/24/gin结合endless实现服务平滑重启/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="defke">
@@ -329,7 +336,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">docker容器使用</h1>
+          <h1 class="post-title" itemprop="name headline">gin结合endless实现服务平滑重启</h1>
         
 
         <div class="post-meta">
@@ -341,8 +348,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-23T22:09:09+08:00">
-                2019-06-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-24T22:14:33+08:00">
+                2019-06-24
               </time>
             
 
@@ -351,6 +358,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/gin学习/" itemprop="url" rel="index">
+                    <span itemprop="name">gin学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -373,7 +402,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  559
                 </span>
               
 
@@ -389,7 +418,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -410,7 +439,54 @@
       
 
       
-        
+        <p>新建一个项目</p>
+<p><img src="/2019/06/24/gin结合endless实现服务平滑重启/1561459924.jpg" alt></p>
+<p>​    用go-module进行包管理（需要go版本&gt;=1.11.0）</p>
+<p>打开命令行，运行如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set GO111MODULE=on			//打开包管理</span><br><span class="line">set GOPROXY= https://goproxy.io		//设置下载包代理</span><br></pre></td></tr></table></figure>
+
+<p>运行命令,初始化项目</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go mod init</span><br></pre></td></tr></table></figure>
+
+<p>在main.go 文件导入如下包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import (</span><br><span class="line">   &quot;github.com/gin-gonic/gin&quot;</span><br><span class="line">   &quot;github.com/fvbock/endless&quot;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go mod vendor</span><br></pre></td></tr></table></figure>
+
+<p>这时候，go包管理工具就会为我们下载导入的包跟需要的关联包到vendor目录下</p>
+<p><img src="/2019/06/24/gin结合endless实现服务平滑重启/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190625191018.png" alt></p>
+<p>在main.go 下编写demo，代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">   &quot;github.com/fvbock/endless&quot;</span><br><span class="line">   &quot;github.com/gin-gonic/gin&quot;</span><br><span class="line">   &quot;log&quot;</span><br><span class="line">   &quot;net/http&quot;</span><br><span class="line">   &quot;time&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func handle(c *gin.Context) &#123;</span><br><span class="line">   duration,err := time.ParseDuration(c.Query(&quot;duration&quot;))</span><br><span class="line">   if err != nil &#123;</span><br><span class="line">      log.Println(&quot;err:&quot;,err)</span><br><span class="line">      return</span><br><span class="line">   &#125;</span><br><span class="line">   time.Sleep(duration)</span><br><span class="line">   c.String(http.StatusOK,&quot;hello world&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">   router := gin.Default()</span><br><span class="line">   router.GET(&quot;/sleep&quot;,handle)</span><br><span class="line">   err := endless.ListenAndServe(&quot;:8080&quot;,router)</span><br><span class="line">   if err != nil &#123;</span><br><span class="line">      log.Println(&quot;err:&quot;,err)</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将代码打包到linux服务器运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go build &amp;&amp; nohup ./hot-upgrade-demo &amp;</span><br></pre></td></tr></table></figure>
+
+<p>现在将打印输出改成 “hello world”,重新编译</p>
+<p><img src="/2019/06/24/gin结合endless实现服务平滑重启/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190625205539.png" alt></p>
+<p>在命令行使用curl请求</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl &quot;http://localhost:8080/sleep?duration=60s&quot;</span><br></pre></td></tr></table></figure>
+
+<p>另起一个终端，在另一个终端输入如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl &quot;http://localhost:8080/sleep?duration=1s&quot;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p>第一个终端返回：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello world</span><br></pre></td></tr></table></figure>
+
+<p>第二个终端返回:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello friend</span><br></pre></td></tr></table></figure>
+
+<p>ps -ef  命令下的程序运行图</p>
+<p><img src="/2019/06/24/gin结合endless实现服务平滑重启/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190625210230.png" alt></p>
+<p>如图所示，在关闭pid 540 的程序之后，程序会另起一个子进程，等连接断开后，关闭父进程，如图：</p>
+<p><img src="/2019/06/24/gin结合endless实现服务平滑重启/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190625210445.png" alt></p>
+<p>这说明第一个请求的连接并没有关闭，用的还是原来的连接，这样就实现程序的平滑重启</p>
+<p>注意：</p>
+<p>程序在windows运行会报错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># hot-upgrade-demo/vendor/github.com/fvbock/endless</span><br><span class="line">vendor\github.com\fvbock\endless\endless.go:64:3: undefined: syscall.SIGUSR1</span><br><span class="line">vendor\github.com\fvbock\endless\endless.go:65:3: undefined: syscall.SIGUSR2</span><br><span class="line">vendor\github.com\fvbock\endless\endless.go:68:3: undefined: syscall.SIGTSTP</span><br><span class="line">vendor\github.com\fvbock\endless\endless.go:111:5: undefined: syscall.SIGUSR1</span><br><span class="line">vendor\github.com\fvbock\endless\endless.go:112:5: undefined: syscall.SIGUSR2</span><br><span class="line">vendor\github.com\fvbock\endless\endless.go:115:5: undefined: syscall.SIGTSTP</span><br><span class="line">vendor\github.com\fvbock\endless\endless.go:119:5: undefined: syscall.SIGUSR1</span><br><span class="line">vendor\github.com\fvbock\endless\endless.go:120:5: undefined: syscall.SIGUSR2</span><br><span class="line">vendor\github.com\fvbock\endless\endless.go:123:5: undefined: syscall.SIGTSTP</span><br><span class="line">vendor\github.com\fvbock\endless\endless.go:224:3: undefined: syscall.Kill</span><br><span class="line">vendor\github.com\fvbock\endless\endless.go:224:3: too many errors</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
@@ -428,6 +504,35 @@
 <div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文作者:</span><a href="/" title="访问 defke 的个人博客">defke</a></p>
+  <p><span>本文链接:</span><a href="/2019/06/24/gin结合endless实现服务平滑重启/" title="gin结合endless实现服务平滑重启">https://www.defke.top/2019/06/24/gin结合endless实现服务平滑重启/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.defke.top/2019/06/24/gin结合endless实现服务平滑重启/" aria-label="复制成功！"></i></span>
+  </p>
+  <p> 
+  <span>版权声明：</span>
+        本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！
+  </p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
       
 </div>
 
@@ -439,6 +544,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/运维/" rel="tag"><i class="fa fa-tag"></i>运维</a>
+          
+            <a href="/tags/gin/" rel="tag"><i class="fa fa-tag"></i>gin</a>
+          
+        </div>
+      
 
       
       
@@ -448,8 +561,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/23/git常用命令/" rel="next" title="git常用命令">
-                <i class="fa fa-chevron-left"></i> git常用命令
+              <a href="/2019/06/24/aritle-2/" rel="next" title="aritle">
+                <i class="fa fa-chevron-left"></i> aritle
               </a>
             
           </div>
@@ -458,8 +571,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/06/23/aritle/" rel="prev" title="文章">
-                文章 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/06/25/aritle-3/" rel="prev" title="aritle">
+                aritle <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
